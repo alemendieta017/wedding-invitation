@@ -24,3 +24,23 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Estilos para la primera sección de boda */
+.font-great-vibes {
+  font-family: var(--font-great-vibes), 'Great Vibes', cursive;
+}
+
+.font-serif {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+}
+
+/* Asegurar que la imagen de fondo se vea correctamente */
+.hero-section {
+  height: 100dvh;
+  height: 100vh; /* Fallback para navegadores que no soportan dvh */
+}
+
+/* Mejorar la legibilidad del texto sobre la imagen */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}

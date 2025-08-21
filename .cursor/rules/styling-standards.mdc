@@ -1,0 +1,35 @@
+# Styling Standards
+
+## Tailwind CSS Usage
+- Use Tailwind CSS 4 for all styling
+- Prefer utility classes over custom CSS
+- Use responsive prefixes (sm:, md:, lg:, xl:) for breakpoints
+- Follow mobile-first responsive design approach
+
+## CSS Organization
+- Global styles in [src/app/globals.css](mdc:src/app/globals.css)
+- Component-specific styles using Tailwind classes
+- Use CSS custom properties for theme values
+- Avoid inline styles unless absolutely necessary
+
+## Design System
+- Use consistent spacing scale (4, 8, 16, 24, 32, 48, 64)
+- Maintain consistent color palette
+- Use semantic color names (primary, secondary, accent)
+- Follow accessibility guidelines for contrast ratios
+
+## Component Styling
+- Create reusable component variants
+- Use conditional classes for dynamic styling
+- Leverage Tailwind's component extraction
+- Keep styling close to component logic
+
+## Responsive Design
+- Mobile-first approach
+- Use container queries when appropriate
+- Test on multiple screen sizes
+- Ensure touch-friendly interactions on mobile
+description:
+globs:
+alwaysApply: false
+---

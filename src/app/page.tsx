@@ -2,102 +2,353 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+		<main className="flex min-h-screen flex-col">
+			{/* Primera sección - Hero con imagen de fondo */}
+			<section className="hero-section relative w-full overflow-hidden">
+				{/* Imagen de fondo */}
+				<Image
+					src="/d82d28e3e5040753a89c6d003e6b727d.jpg"
+					alt="Jessica y Alejandro - Foto de boda"
+					fill
+					className="object-cover"
+					priority
+				/>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+				{/* Overlay oscuro semi-transparente */}
+				<div className="absolute inset-0 bg-black/40"></div>
+
+				{/* Contenido centrado */}
+				<div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
+					{/* Nombres de la pareja */}
+					<h1 className="text-6xl md:text-8xl font-great-vibes text-center mb-6 font-light tracking-wider text-shadow">
+						Jessica & Alejandro
+					</h1>
+
+					{/* Texto "NOS CASAMOS" con líneas decorativas */}
+					<div className="flex items-center gap-6">
+						<div className="w-16 h-px bg-white"></div>
+						<span className="text-xl md:text-2xl font-light tracking-widest uppercase text-shadow">
+							Nos Casamos
+						</span>
+						<div className="w-16 h-px bg-white"></div>
+					</div>
+				</div>
+			</section>
+
+			{/* Segunda sección - Logo y fecha de la boda */}
+			<section className="py-20 px-4 relative overflow-hidden">
+				{/* Video de fondo */}
+				<video
+					autoPlay
+					loop
+					muted
+					playsInline
+					className="absolute inset-0 w-full h-full object-cover"
+				>
+					<source
+						src="/4d369b99254624da301ad06d8c20480e.mp4"
+						type="video/mp4"
+					/>
+				</video>
+
+				{/* Overlay claro para hacer el fondo más luminoso */}
+				<div className="absolute inset-0 bg-white/90"></div>
+
+				{/* Contenido centrado con z-index para estar sobre el video */}
+				<div className="max-w-4xl mx-auto text-center relative z-10">
+					{/* Logo de la boda */}
+					<div className="mb-12">
+						<Image
+							src="/e90ecbf79acf3ad40360a1dfb8910a2c.png"
+							alt="Logo de boda Jessica y Alejandro"
+							width={400}
+							height={300}
+							className="mx-auto drop-shadow-lg"
+							priority
+						/>
+					</div>
+
+					{/* Fecha de la boda */}
+					<div className="mb-8">
+						<div className="inline-block">
+							{/* Línea decorativa superior */}
+							<div className="w-32 h-px bg-amber-800 mx-auto mb-4"></div>
+
+							{/* Fecha */}
+							<h2 className="text-4xl md:text-5xl font-serif text-amber-800 font-light tracking-wider mb-4">
+								25 . 10 . 2025
+							</h2>
+
+							{/* Línea decorativa inferior */}
+							<div className="w-32 h-px bg-amber-800 mx-auto"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Tercera sección - Invitación a la boda */}
+			<section className="relative w-full overflow-hidden">
+				{/* Imagen de fondo */}
+				<Image
+					src="/5072c29d4c5f852dc7a4e2fd5ee67d6f.jpg"
+					alt="Invitación a la boda Jessica y Alejandro"
+					fill
+					className="object-cover"
+					priority
+				/>
+
+				{/* Overlay oscuro semi-transparente para mejor legibilidad del texto */}
+				<div className="absolute inset-0 bg-black/30"></div>
+
+				{/* Contenido centrado */}
+				<div className="relative z-10 py-20 px-4">
+					<div className="max-w-4xl mx-auto text-center text-white">
+						{/* Título principal */}
+						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow">
+							ESTÁS INVITADO A NUESTRA BODA
+						</h2>
+
+						{/* Texto descriptivo */}
+						<div className="text-lg md:text-xl font-light leading-relaxed text-shadow max-w-3xl mx-auto">
+							<p className="mb-4">QUEREMOS QUE TE EMBARQUES CON NOSOTROS</p>
+							<p className="mb-4">EN ESTA GRAN AVENTURA: LA DE PRESENCIAR</p>
+							<p className="mb-4">
+								NUESTRO &ldquo;SÍ, QUIERO&rdquo; Y CELEBRAR EL AMOR QUE
+							</p>
+							<p className="mb-4">NOS UNE, COMPARTIENDO RISAS, EMOCIONES Y</p>
+							<p className="mb-4">MOMENTOS QUE QUEDARÁN GRABADOS PARA</p>
+							<p>SIEMPRE EN NUESTRA MEMORIA.</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Cuarta sección - Código de vestimenta COCTEL */}
+			<section className="relative w-full overflow-hidden">
+				{/* Video de fondo superpuesto */}
+				<video
+					autoPlay
+					loop
+					muted
+					playsInline
+					className="absolute inset-0 w-full h-full object-cover"
+				>
+					<source
+						src="/4d369b99254624da301ad06d8c20480e.mp4"
+						type="video/mp4"
+					/>
+				</video>
+
+				{/* Overlay claro para mejor legibilidad */}
+				<div className="absolute inset-0 bg-white/80"></div>
+
+				{/* Contenido centrado */}
+				<div className="relative z-10 px-4">
+					<div className="max-w-6xl mx-auto">
+						{/* Título principal */}
+						<div className="text-center mb-16">
+							<h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-2">
+								TENIDA:
+							</h2>
+							<h3 className="text-5xl md:text-6xl font-sans text-amber-700 font-bold">
+								COCTEL
+							</h3>
+						</div>
+
+						{/* Imagen principal debajo del título */}
+						<div className="text-center mb-16">
+							<div className="w-full max-w-4xl mx-auto h-[500px] rounded-lg">
+								<Image
+									src="/77ad98801938ae8054b97e68fa98fb59.png"
+									alt="Guía de vestimenta COCTEL"
+									width={1080}
+									height={1350}
+									className="ml-10 w-full h-full object-cover object-[0%_40%]"
+									priority
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Quinta sección - Lugar de la ceremonia y recepción */}
+			<section className="relative w-full overflow-hidden">
+				{/* Imagen de fondo */}
+				<Image
+					src="/48bb166f43c17820431359e70d8a41db.jpg"
+					alt="Centro Cultural y de Convenciones ITA ENRAMADA"
+					fill
+					className="object-cover"
+					priority
+				/>
+
+				{/* Overlay oscuro semi-transparente para mejor legibilidad del texto */}
+				<div className="absolute inset-0 bg-black/40"></div>
+
+				{/* Contenido centrado */}
+				<div className="relative z-10 py-20 px-4">
+					<div className="max-w-4xl mx-auto text-center text-white">
+						{/* Título principal */}
+						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow">
+							LUGAR DE LA CEREMONIA Y RECEPCIÓN
+						</h2>
+
+						{/* Tipo de venue */}
+						<h3 className="text-2xl md:text-3xl font-light tracking-wider text-shadow mb-6">
+							CENTRO CULTURAL Y DE CONVENCIONES
+						</h3>
+
+						{/* Nombre del venue */}
+						<h4 className="text-3xl md:text-4xl font-serif text-center mb-6 font-light tracking-wider text-shadow">
+							ITA ENRAMADA
+						</h4>
+
+						{/* Dirección */}
+						<p className="text-lg md:text-xl font-light tracking-wider text-shadow">
+							AVDA. CORONEL ABRAHAN SCHWEIZER, ASUNCIÓN
+						</p>
+					</div>
+				</div>
+			</section>
+
+			{/* Sexta sección - Fondo de luna de miel */}
+			<section className="relative w-full overflow-hidden">
+				{/* Imagen de fondo */}
+				<Image
+					src="/f0a8493495602eb2ac61248d6d3d9820.jpg"
+					alt="Fondo para fondo de luna de miel"
+					fill
+					className="object-cover"
+					priority
+				/>
+
+				{/* Overlay negro semi-transparente */}
+				<div className="absolute inset-0 bg-black/60"></div>
+
+				{/* Contenido centrado */}
+				<div className="relative z-10 py-20 px-4">
+					<div className="max-w-4xl mx-auto text-center text-white">
+						{/* Mensaje principal */}
+						<div className="mb-12">
+							<h2 className="text-4xl md:text-5xl font-serif text-center mb-4 font-light tracking-wider text-shadow">
+								TU PRESENCIA ES
+							</h2>
+							<h3 className="text-5xl md:text-6xl font-serif text-center mb-6 font-bold tracking-wider text-shadow">
+								NUESTRO MEJOR REGALO.
+							</h3>
+							<div className="text-lg md:text-xl font-light leading-relaxed text-shadow max-w-3xl mx-auto">
+								<p className="mb-2">PERO SI QUIERES DARNOS UN PRESENTE..</p>
+								<p className="mb-2">¡PUEDES AYUDARNOS A TENER UNA</p>
+								<p>LUNA DE MIEL INCREIBLE!</p>
+							</div>
+						</div>
+
+						{/* Detalles bancarios */}
+						<div className="inline-block border border-white rounded-lg p-8 relative">
+							{/* Elemento decorativo */}
+							<div className="absolute -left-3 top-1/2 transform -translate-y-1/2 w-3 h-3 bg-white rotate-45"></div>
+
+							<div className="text-left">
+								<h4 className="text-2xl md:text-3xl font-serif font-bold mb-4 text-shadow">
+									BANCO UENO
+								</h4>
+								<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+									Alejandro Mendieta
+								</p>
+								<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+									Cuenta N°: 14825960
+								</p>
+								<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+									C.I.N°: 4.670.473
+								</p>
+								<p className="text-lg md:text-xl font-light text-shadow">
+									Alias: <span className="font-bold">4670473</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* Séptima sección - Línea de tiempo del día de la boda */}
+			<section className="py-20 px-4 relative overflow-hidden bg-white">
+				{/* Rosa decorativa en la esquina superior izquierda */}
+				<div className="absolute top-0 left-0">
+					<Image
+						src="/232c6320146b3712f51059d8621157f5.png"
+						alt="Rosa decorativa"
+						width={658}
+						height={800}
+						className="object-fit w-full h-full object-bottom -rotate-90"
+					/>
+				</div>
+
+				{/* Contenido principal */}
+				<div className="max-w-4xl mx-auto relative z-10">
+					{/* Título principal */}
+					<div className="text-center mb-16">
+						<h2 className="text-4xl md:text-5xl font-serif text-amber-800 font-light tracking-wider">
+							EL GRAN DÍA
+						</h2>
+					</div>
+
+					<div>
+						<Image
+							src="/cronograma.png"
+							alt="Cronograma del día"
+							width={1080}
+							height={1920}
+							className="mx-auto"
+						/>
+					</div>
+				</div>
+			</section>
+
+			{/* Octava sección - Confirmación de asistencia */}
+			<section className="relative w-full overflow-hidden">
+				{/* Imagen de fondo */}
+				<Image
+					src="/584dacf38cb0666cd8e465c847137c99.jpg"
+					alt="Confirmación de asistencia Jessica y Alejandro"
+					fill
+					className="object-cover object-[0%_10%]"
+					priority
+				/>
+
+				{/* Overlay oscuro semi-transparente para mejor legibilidad del texto */}
+				<div className="absolute inset-0 bg-black/40"></div>
+
+				{/* Contenido centrado */}
+				<div className="relative z-10 py-40 px-4">
+					<div className="max-w-4xl mx-auto text-center text-white">
+						{/* Título principal */}
+						<h2 className="text-xl md:text-2xl font-sans text-center mb-6 font-light tracking-wider text-shadow">
+							CONFIRMA TU ASISTENCIA AL:
+						</h2>
+
+						{/* Número de teléfono */}
+						<div className="mb-6">
+							<p className="text-lg md:text-xl font-sans font-light tracking-wider text-shadow">
+								(0994) 208286
+							</p>
+						</div>
+
+						{/* Nombre de contacto */}
+						<div className="mb-6">
+							<p className="text-lg md:text-xl font-sans font-light tracking-wider text-shadow">
+								LIZ SAMUDIO
+							</p>
+						</div>
+
+						{/* Mensaje final */}
+						<div className="text-base md:text-lg font-serif font-light leading-relaxed text-shadow">
+							<p className="mb-2">¡ESPERAMOS QUE PUEDAS</p>
+							<p>ACOMPAÑARNOS!</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	)
 }

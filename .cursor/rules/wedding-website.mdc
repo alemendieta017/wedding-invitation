@@ -1,0 +1,39 @@
+# Wedding Website Guidelines
+
+## Design Philosophy
+- Create an elegant, romantic, and welcoming experience
+- Use warm, romantic color palettes
+- Ensure the design reflects Ale and Jesse's style
+- Make it mobile-friendly for guests on-the-go
+
+## Key Sections to Consider
+- **Hero Section**: Beautiful imagery with couple's names
+- **Our Story**: How they met and their journey
+- **Wedding Details**: Date, time, location, RSVP
+- **Photo Gallery**: Engagement photos and memories
+- **Registry Information**: Gift preferences
+- **Travel & Accommodations**: Hotel blocks and directions
+- **Contact Information**: For questions and RSVPs
+
+## User Experience
+- Fast loading times for mobile users
+- Easy navigation between sections
+- Clear call-to-actions (RSVP, directions, etc.)
+- Accessible design for all guests
+- Print-friendly pages for offline reference
+
+## Content Strategy
+- Use authentic, personal content
+- Include both practical information and romantic touches
+- Consider multiple languages if needed
+- Regular updates as wedding details are finalized
+
+## Technical Considerations
+- Optimize images for web (use Next.js Image component)
+- Implement proper SEO for searchability
+- Consider offline capabilities for mobile users
+- Easy sharing on social media platforms
+description:
+globs:
+alwaysApply: false
+---

@@ -1,0 +1,36 @@
+# Next.js 15 App Router Patterns
+
+## App Router Structure
+- Use the new App Router (`src/app/` directory)
+- Place pages in `src/app/` with appropriate route segments
+- Use `layout.tsx` for shared layouts
+- Use `page.tsx` for route components
+
+## File Conventions
+- `page.tsx` - Route components (required)
+- `layout.tsx` - Shared layouts
+- `loading.tsx` - Loading UI
+- `error.tsx` - Error boundaries
+- `not-found.tsx` - 404 pages
+
+## Metadata and SEO
+- Use `metadata` export in layout files
+- Set proper title, description, and Open Graph tags
+- Use dynamic metadata for dynamic routes
+- Implement structured data when appropriate
+
+## Data Fetching
+- Use Server Components by default
+- Use `use client` directive only when needed
+- Implement proper error boundaries
+- Use Next.js caching strategies
+
+## Performance
+- Enable Turbopack for development (`--turbopack`)
+- Use Image component for optimized images
+- Implement proper loading states
+- Use Suspense boundaries for code splitting
+description:
+globs:
+alwaysApply: false
+---

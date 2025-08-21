@@ -1,0 +1,29 @@
+---
+alwaysApply: true
+---
+# Wedding Website Project Structure
+
+This is a Next.js 15 wedding website project for Ale and Jesse. The main structure follows Next.js App Router conventions:
+
+## Key Files
+- **Entry Point**: [src/app/page.tsx](mdc:src/app/page.tsx) - Main homepage component
+- **Layout**: [src/app/layout.tsx](mdc:src/app/layout.tsx) - Root layout with fonts and metadata
+- **Styling**: [src/app/globals.css](mdc:src/app/globals.css) - Global CSS styles
+- **Config**: [next.config.ts](mdc:next.config.ts) - Next.js configuration
+- **TypeScript**: [tsconfig.json](mdc:tsconfig.json) - TypeScript configuration with path aliases
+
+## Path Aliases
+- Use `@/*` to reference files from the `src/` directory (e.g., `@/components/Button`)
+
+## Tech Stack
+- Next.js 15 with App Router
+- React 19
+- TypeScript 5
+- Tailwind CSS 4
+- Lucide React for icons
+- ESLint for code quality
+
+## Development Commands
+- `npm run dev` - Start development server with Turbopack
+- `npm run build` - Build for production
+- `npm run lint` - Run ESLint

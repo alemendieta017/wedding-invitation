@@ -1,0 +1,35 @@
+# React Component Standards
+
+## Component Structure
+- Use functional components with hooks
+- Place components in `src/components/` directory
+- Use PascalCase for component names
+- Export components as default exports
+
+## Props and Types
+- Define prop interfaces with descriptive names
+- Use `Readonly<T>` for props to prevent mutations
+- Make props optional when appropriate with `?`
+- Use `React.ReactNode` for children props
+
+## Hooks Usage
+- Follow React hooks rules (only call at top level)
+- Use custom hooks for reusable logic
+- Extract complex state logic into custom hooks
+- Use `useCallback` and `useMemo` for performance optimization
+
+## File Organization
+- One component per file
+- Co-locate related components in the same directory
+- Use index files for clean imports
+- Keep components focused and single-responsibility
+
+## Styling
+- Use Tailwind CSS classes for styling
+- Create reusable component variants
+- Use CSS modules for component-specific styles when needed
+- Follow mobile-first responsive design
+description:
+globs:
+alwaysApply: false
+---
