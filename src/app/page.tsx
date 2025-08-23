@@ -4,7 +4,7 @@ export default function Home() {
 	return (
 		<main className="flex min-h-screen flex-col">
 			{/* Primera sección - Hero con imagen de fondo */}
-			<section className="hero-section relative w-full overflow-hidden">
+			<section className="hero-section relative w-full overflow-hidden flex flex-col items-center justify-end">
 				{/* Imagen de fondo */}
 				<Image
 					src="/d82d28e3e5040753a89c6d003e6b727d.jpg"
@@ -18,7 +18,7 @@ export default function Home() {
 				<div className="absolute inset-0 bg-black/40"></div>
 
 				{/* Contenido centrado */}
-				<div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
+				<div className="relative mb-44 text-white z-10 flex flex-col items-center justify-center">
 					{/* Nombres de la pareja */}
 					<h1 className="text-6xl md:text-8xl font-great-vibes text-center mb-6 font-light tracking-wider text-shadow">
 						Jessica & Alejandro
@@ -27,7 +27,7 @@ export default function Home() {
 					{/* Texto "NOS CASAMOS" con líneas decorativas */}
 					<div className="flex items-center gap-6">
 						<div className="w-16 h-px bg-white"></div>
-						<span className="text-lg md:text-2xl font-light tracking-widest uppercase text-shadow">
+						<span className="text-lg md:text-2xl font-sans font-light tracking-widest uppercase text-shadow">
 							Nos Casamos
 						</span>
 						<div className="w-16 h-px bg-white"></div>
@@ -89,23 +89,23 @@ export default function Home() {
 				/>
 
 				{/* Overlay oscuro semi-transparente para mejor legibilidad del texto */}
-				<div className="absolute inset-0 bg-black/30"></div>
+				<div className="absolute inset-0 bg-black/50"></div>
 
 				{/* Contenido centrado */}
-				<div className="relative z-10 py-20 px-4">
-					<div className="max-w-screen-md mx-auto text-center text-white">
+				<div className="relative z-10 min-h-screen max-w-2xl mx-auto flex items-center justify-center">
+					<div className="max-w-screen-sm mx-auto text-center text-white">
 						{/* Título principal */}
-						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow lg:whitespace-nowrap">
+						<h2 className="text-3xl md:text-4xl font-serif text-center text-shadow mb-4">
 							Estás invitado a nuestra boda
 						</h2>
 
 						{/* Texto descriptivo */}
-						<div className="text-lg md:text-2xl font-light leading-relaxed text-shadow max-w-3xl mx-auto">
+						<div className="font-sans text-sm md:text-lg tracking-widest leading-snug text-shadow mx-auto px-6">
 							<p>
-								Queremos que te embarques con nosotros en esta gran aventura: la
-								de presenciar nuestro &ldquo;sí, quiero&rdquo; y celebrar el
-								amor que nos une, compartiendo risas, emociones y momentos que
-								quedarán grabados para siempre en nuestra memoria.
+								QUEREMOS QUE TE EMBARQUES CON NOSOTROS EN ESTA GRAN AVENTURA: LA
+								DE PRESENCIAR NUESTRO “SÍ, QUIERO” Y CELEBRAR EL AMOR QUE NOS
+								UNE, COMPARTIENDO RISAS, EMOCIONES Y MOMENTOS QUE QUEDARÁN
+								GRABADOS PARA SIEMPRE EN NUESTRA MEMORIA.
 							</p>
 						</div>
 					</div>
@@ -132,31 +132,27 @@ export default function Home() {
 				<div className="absolute inset-0 bg-white/80"></div>
 
 				{/* Contenido centrado */}
-				<div className="relative z-10 px-4">
+				<div className="relative z-10 px-4 py-36">
 					<div className="max-w-6xl mx-auto">
 						{/* Título principal */}
-						<div className="text-center mb-16">
-							<h2 className="text-4xl md:text-5xl font-serif text-gray-800 mb-2">
+						<div className="text-center">
+							<h2 className="text-2xl md:text-4xl tracking-widest font-serif text-gray-800">
 								TENIDA:
 							</h2>
-							<h3 className="text-5xl md:text-6xl font-sans text-amber-700 font-bold">
+							<h3 className="text-2xl md:text-4xl font-serif font-bold text-amber-700 tracking-widest">
 								COCTEL
 							</h3>
 						</div>
 
 						{/* Imagen principal debajo del título */}
-						<div className="text-center mb-16">
-							<div className="w-full max-w-4xl mx-auto h-[500px] rounded-lg">
-								<Image
-									src="/77ad98801938ae8054b97e68fa98fb59.png"
-									alt="Guía de vestimenta COCTEL"
-									width={1080}
-									height={1350}
-									className="ml-10 w-full h-full object-cover object-[0%_40%]"
-									priority
-								/>
-							</div>
-						</div>
+						<Image
+							src="/77ad98801938ae8054b97e68fa98fb59.png"
+							alt="Guía de vestimenta COCTEL"
+							width={1080}
+							height={1350}
+							className="ml-2 lg:ml-24 aspect-video object-[50%_40%] object-cover"
+							priority
+						/>
 					</div>
 				</div>
 			</section>
@@ -179,19 +175,14 @@ export default function Home() {
 				<div className="relative z-10 py-20 px-4">
 					<div className="max-w-4xl mx-auto text-center text-white">
 						{/* Título principal */}
-						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow">
+						<h2 className="text-2xl md:text-4xl font-serif text-center text-shadow mb-4">
 							LUGAR DE LA CEREMONIA Y RECEPCIÓN
 						</h2>
 
 						{/* Tipo de venue */}
-						<h3 className="text-2xl md:text-3xl font-light tracking-wider text-shadow mb-6">
-							CENTRO CULTURAL Y DE CONVENCIONES
+						<h3 className="text-2xlfont-sans tracking-widest text-shadow mb-6">
+							CENTRO CULTURAL Y DE CONVENCIONES ITA ENRAMADA
 						</h3>
-
-						{/* Nombre del venue */}
-						<h4 className="text-3xl md:text-4xl font-serif text-center mb-6 font-light tracking-wider text-shadow">
-							ITA ENRAMADA
-						</h4>
 
 						{/* Dirección */}
 						<p className="text-lg md:text-xl font-light tracking-wider text-shadow">

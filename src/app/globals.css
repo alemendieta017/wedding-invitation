@@ -8,7 +8,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-montserrat-arabic);
   --font-mono: var(--font-geist-mono);
 }
 
@@ -27,17 +27,16 @@ body {
 
 /* Estilos para la primera sección de boda */
 .font-great-vibes {
-  font-family: var(--font-great-vibes), 'Great Vibes', cursive;
+  font-family: var(--font-great-vibes), "Great Vibes", cursive;
 }
 
 .font-serif {
-  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-family: var(--font-le-jour-serif), 'Times New Roman', serif;
 }
 
 /* Asegurar que la imagen de fondo se vea correctamente */
 .hero-section {
   height: 100dvh;
-  height: 100vh; /* Fallback para navegadores que no soportan dvh */
 }
 
 /* Mejorar la legibilidad del texto sobre la imagen */

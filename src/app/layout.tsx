@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import { Great_Vibes } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 const greatVibes = Great_Vibes({
   variable: "--font-great-vibes",
   subsets: ["latin"],
   weight: "400",
+});
+
+const montserratArabic = localFont({
+  src: "../../public/fonts/Montserrat-Arabic-Regular.ttf",
+  variable: "--font-montserrat-arabic",
+});
+
+const leJourSerif = localFont({
+  src: "../../public/fonts/Le Jour Serif.otf",
+  variable: "--font-le-jour-serif",
 });
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${greatVibes.variable} antialiased`}
+        className={`${greatVibes.variable} ${montserratArabic.variable} ${leJourSerif.variable} antialiased`}
       >
         {children}
       </body>
