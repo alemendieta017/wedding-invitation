@@ -1,7 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 export default function Home() {
-  return (
+	return (
 		<main className="flex min-h-screen flex-col">
 			{/* Primera sección - Hero con imagen de fondo */}
 			<section className="hero-section relative w-full overflow-hidden">
@@ -27,7 +27,7 @@ export default function Home() {
 					{/* Texto "NOS CASAMOS" con líneas decorativas */}
 					<div className="flex items-center gap-6">
 						<div className="w-16 h-px bg-white"></div>
-						<span className="text-xl md:text-2xl font-light tracking-widest uppercase text-shadow">
+						<span className="text-lg md:text-2xl font-light tracking-widest uppercase text-shadow">
 							Nos Casamos
 						</span>
 						<div className="w-16 h-px bg-white"></div>
@@ -36,7 +36,7 @@ export default function Home() {
 			</section>
 
 			{/* Segunda sección - Logo y fecha de la boda */}
-			<section className="py-20 px-4 relative overflow-hidden">
+			<section className="px-4 relative overflow-hidden">
 				{/* Video de fondo */}
 				<video
 					autoPlay
@@ -55,33 +55,24 @@ export default function Home() {
 				<div className="absolute inset-0 bg-white/90"></div>
 
 				{/* Contenido centrado con z-index para estar sobre el video */}
-				<div className="max-w-4xl mx-auto text-center relative z-10">
+				<div className="md:min-h-none py-40 md:py-30 mx-auto text-center relative z-10">
 					{/* Logo de la boda */}
-					<div className="mb-12">
+					<div className="mx-auto">
 						<Image
 							src="/e90ecbf79acf3ad40360a1dfb8910a2c.png"
 							alt="Logo de boda Jessica y Alejandro"
-							width={400}
-							height={300}
-							className="mx-auto drop-shadow-lg"
+							width={640}
+							height={800}
+							className="mx-auto aspect-video object-cover drop-shadow-lg"
 							priority
 						/>
 					</div>
 
 					{/* Fecha de la boda */}
-					<div className="mb-8">
-						<div className="inline-block">
-							{/* Línea decorativa superior */}
-							<div className="w-32 h-px bg-amber-800 mx-auto mb-4"></div>
-
-							{/* Fecha */}
-							<h2 className="text-4xl md:text-5xl font-serif text-amber-800 font-light tracking-wider mb-4">
-								25 . 10 . 2025
-							</h2>
-
-							{/* Línea decorativa inferior */}
-							<div className="w-32 h-px bg-amber-800 mx-auto"></div>
-						</div>
+					<div className="inline-block">
+						<h2 className="text-4xl md:text-5xl font-great-vibes text-amber-800 font-light tracking-wider border-y border-black px-2 py-1">
+							25 . 10 . 2025
+						</h2>
 					</div>
 				</div>
 			</section>
@@ -102,22 +93,20 @@ export default function Home() {
 
 				{/* Contenido centrado */}
 				<div className="relative z-10 py-20 px-4">
-					<div className="max-w-4xl mx-auto text-center text-white">
+					<div className="max-w-screen-md mx-auto text-center text-white">
 						{/* Título principal */}
-						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow">
-							ESTÁS INVITADO A NUESTRA BODA
+						<h2 className="text-4xl md:text-6xl font-serif text-center mb-8 font-light tracking-wider text-shadow lg:whitespace-nowrap">
+							Estás invitado a nuestra boda
 						</h2>
 
 						{/* Texto descriptivo */}
-						<div className="text-lg md:text-xl font-light leading-relaxed text-shadow max-w-3xl mx-auto">
-							<p className="mb-4">QUEREMOS QUE TE EMBARQUES CON NOSOTROS</p>
-							<p className="mb-4">EN ESTA GRAN AVENTURA: LA DE PRESENCIAR</p>
-							<p className="mb-4">
-								NUESTRO &ldquo;SÍ, QUIERO&rdquo; Y CELEBRAR EL AMOR QUE
+						<div className="text-lg md:text-2xl font-light leading-relaxed text-shadow max-w-3xl mx-auto">
+							<p>
+								Queremos que te embarques con nosotros en esta gran aventura: la
+								de presenciar nuestro &ldquo;sí, quiero&rdquo; y celebrar el
+								amor que nos une, compartiendo risas, emociones y momentos que
+								quedarán grabados para siempre en nuestra memoria.
 							</p>
-							<p className="mb-4">NOS UNE, COMPARTIENDO RISAS, EMOCIONES Y</p>
-							<p className="mb-4">MOMENTOS QUE QUEDARÁN GRABADOS PARA</p>
-							<p>SIEMPRE EN NUESTRA MEMORIA.</p>
 						</div>
 					</div>
 				</div>
