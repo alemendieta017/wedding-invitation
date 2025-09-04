@@ -1,0 +1,31 @@
+import Image from 'next/image'
+
+const Location = () => {
+	return (
+		<section className="relative w-full h-svh flex flex-col justify-center">
+			<Image
+				src="/48bb166f43c17820431359e70d8a41db.jpg"
+				alt="Centro Cultural y de Convenciones ITA ENRAMADA"
+				fill
+				className="object-cover"
+				priority
+			/>
+
+			<div className="absolute inset-0 bg-black/50"></div>
+
+			<div className="relative z-10 max-w-4xl text-white px-10 space-y-4 flex flex-col items-center mx-auto">
+				<h2 className="text-2xl md:text-3xl font-serif text-center text-shadow">
+					LUGAR DE LA CEREMONIA Y RECEPCIÓN
+				</h2>
+				<p className="font-sans md:text-xl font-semibold text-center md:max-w-sm tracking-widest text-shadow">
+					CENTRO CULTURAL Y DE CONVENCIONES ITA ENRAMADA
+				</p>
+				<p className="font-sans md:text-xl font-light text-sm text-center tracking-wider text-shadow">
+					AVDA. CORONEL ABRAHAN SCHWEIZER, ASUNCIÓN
+				</p>
+			</div>
+		</section>
+	)
+}
+
+export default Location
