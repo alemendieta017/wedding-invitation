@@ -4,7 +4,7 @@ const Logo = () => {
 	return (
 		<>
 			{/* Segunda sección - Logo y fecha de la boda */}
-			<section className="px-4 relative overflow-hidden">
+			<section className="px-4 min-h-screen flex flex-col justify-center relative overflow-hidden">
 				{/* Video de fondo */}
 				<video
 					autoPlay

@@ -17,16 +17,16 @@ const Footer = () => {
 			<div className="absolute inset-0 bg-black/40"></div>
 
 			{/* Contenido centrado */}
-			<div className="relative z-10 py-40 px-4">
+			<div className="relative z-10 py-36 px-4">
 				<div className="max-w-4xl mx-auto text-center text-white">
 					{/* Título principal */}
-					<h2 className="text-xl md:text-2xl font-sans text-center mb-6 font-light tracking-wider text-shadow">
+					<h2 className="text-2xl md:text-3xl font-serif text-center mb-6 font-light tracking-wider text-shadow">
 						CONFIRMA TU ASISTENCIA AL:
 					</h2>
 
 					{/* Número de teléfono */}
-					<div className="mb-6">
-						<p className="text-lg md:text-xl font-sans font-light tracking-wider text-shadow">
+					<div className="mb-4">
+						<p className="text-lg md:text-xl font-sans font-semibold tracking-widest text-shadow">
 							(0994) 208286
 						</p>
 					</div>
@@ -39,7 +39,7 @@ const Footer = () => {
 					</div>
 
 					{/* Mensaje final */}
-					<div className="text-base md:text-lg font-serif font-light leading-relaxed text-shadow">
+					<div className="text-lg md:text-xl font-serif font-light leading-relaxed text-shadow">
 						<p className="mb-2">¡ESPERAMOS QUE PUEDAS</p>
 						<p>ACOMPAÑARNOS!</p>
 					</div>
