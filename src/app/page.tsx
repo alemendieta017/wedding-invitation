@@ -6,6 +6,7 @@ import Location from './sections/Location'
 import Honeymoon from './sections/Honeymoon'
 import Schedule from './sections/Schedule'
 import Footer from './sections/Footer'
+import ChurchLocation from './sections/ChurchLocation'
 
 export default function Home() {
 	return (
@@ -14,9 +15,10 @@ export default function Home() {
 			<Logo />
 			<Invitation />
 			<DressCode />
+			<ChurchLocation />
+			<Schedule />
 			<Location />
 			<Honeymoon />
-			<Schedule />
 			<Footer />
 		</main>
 	)

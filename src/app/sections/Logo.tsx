@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 const Logo = () => {
 	return (
@@ -25,7 +28,30 @@ const Logo = () => {
 				{/* Contenido centrado con z-index para estar sobre el video */}
 				<div className="md:min-h-none py-40 md:py-30 mx-auto text-center relative z-10">
 					{/* Logo de la boda */}
-					<div className="mx-auto">
+					<motion.div 
+						className="mx-auto"
+						initial={{ opacity: 0, scale: 0.8, y: 50 }}
+						animate={{ 
+							opacity: 1, 
+							scale: 1, 
+							y: [0, -10, 0]
+						}}
+						transition={{ 
+							opacity: { duration: 1.2, ease: "easeOut", delay: 0.3 },
+							scale: { duration: 1.2, ease: "easeOut", delay: 0.3 },
+							y: {
+								duration: 4,
+								repeat: Infinity,
+								ease: "easeInOut",
+								delay: 1.5
+							}
+						}}
+						whileHover={{ 
+							scale: 1.05,
+							y: -5,
+							transition: { duration: 0.3 }
+						}}
+					>
 						<Image
 							src="/e90ecbf79acf3ad40360a1dfb8910a2c.png"
 							alt="Logo de boda Jessica y Alejandro"
@@ -34,14 +60,51 @@ const Logo = () => {
 							className="mx-auto aspect-video object-cover drop-shadow-lg"
 							priority
 						/>
-					</div>
+					</motion.div>
 
 					{/* Fecha de la boda */}
-					<div className="inline-block">
-						<h2 className="text-4xl md:text-5xl font-great-vibes text-amber-800 font-light tracking-wider border-y border-black px-2 py-1">
+					<motion.div 
+						className="inline-block mt-8"
+						initial={{ opacity: 0, y: 30 }}
+						animate={{ opacity: 1, y: 0 }}
+						transition={{ 
+							duration: 0.8, 
+							ease: "easeOut",
+							delay: 1.0
+						}}
+					>
+						<motion.h2 
+							className="text-4xl md:text-5xl font-great-vibes text-amber-800 font-light tracking-wider border-y border-black px-2 py-1"
+							initial={{ opacity: 0, scale: 0.9 }}
+							animate={{ 
+								opacity: 1, 
+								scale: 1,
+								textShadow: [
+									"0 0 0px rgba(146, 64, 14, 0)",
+									"0 0 10px rgba(146, 64, 14, 0.3)",
+									"0 0 0px rgba(146, 64, 14, 0)"
+								]
+							}}
+							transition={{ 
+								opacity: { duration: 0.6, ease: "easeOut", delay: 1.2 },
+								scale: { duration: 0.6, ease: "easeOut", delay: 1.2 },
+								textShadow: {
+									duration: 3,
+									repeat: Infinity,
+									ease: "easeInOut",
+									delay: 2.0
+								}
+							}}
+							whileHover={{ 
+								scale: 1.05,
+								color: "#92400e",
+								textShadow: "0 0 15px rgba(146, 64, 14, 0.5)",
+								transition: { duration: 0.2 }
+							}}
+						>
 							25 . 10 . 2025
-						</h2>
-					</div>
+						</motion.h2>
+					</motion.div>
 				</div>
 			</section>
 		</>

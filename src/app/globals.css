@@ -1,44 +1,56 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-montserrat);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-sans);
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
 }
 
 /* Estilos para la primera sección de boda */
 .font-gwendolyn {
-  font-family: var(--font-gwendolyn), "Gwendolyn", cursive;
+	font-family: var(--font-gwendolyn), 'Gwendolyn', cursive;
 }
 
 .font-great-vibes {
-  font-family: var(--font-great-vibes), "Great Vibes", cursive;
+	font-family: var(--font-great-vibes), 'Great Vibes', cursive;
 }
 
 .font-serif {
-  font-family: var(--font-le-jour-serif), 'Times New Roman', serif;
+	font-family: var(--font-le-jour-serif), 'Times New Roman', serif;
 }
 
 /* Mejorar la legibilidad del texto sobre la imagen */
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto parallax para la sección de invitación */
+.invitation-parallax {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	transform: translateZ(0);
+	will-change: transform;
 }

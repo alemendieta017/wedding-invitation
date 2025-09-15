@@ -1,50 +1,51 @@
-import Image from 'next/image'
 import React from 'react'
 
 const Honeymoon = () => {
 	return (
-		<section className="relative w-full h-svh flex flex-col justify-center overflow-hidden">
-			<Image
-				src="/f0a8493495602eb2ac61248d6d3d9820.jpg"
-				alt="Fondo para fondo de luna de miel"
-				fill
-				className="object-cover"
-				priority
-			/>
+		<section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden">
+			{/* Video de fondo */}
+			<video
+				autoPlay
+				loop
+				muted
+				playsInline
+				className="absolute inset-0 w-full h-full object-cover"
+			>
+				<source src="/4d369b99254624da301ad06d8c20480e.mp4" type="video/mp4" />
+			</video>
 
-			{/* Overlay negro semi-transparente */}
-			<div className="absolute inset-0 bg-black/60"></div>
-
+			{/* Overlay claro para hacer el fondo más luminoso */}
+			<div className="absolute inset-0 bg-white/90"></div>
 			<div className="relative z-10 px-4">
-				<div className="max-w-4xl mx-auto text-center text-white">
-					<h2 className="text-3xl md:text-4xl font-serif text-center mb-2 font-light tracking-wider text-shadow">
-						TU PRESENCIA ES
+				<div className="max-w-4xl mx-auto text-center text-black">
+					<h2 className="text-amber-800 text-2xl md:text-3xl italic font-family-[Times New Roman] uppercase text-center mb-2 font-bold tracking-wider">
+						¡Tu presencia es nuestro mejor regalo!
 					</h2>
-					<h3 className="text-3xl md:text-4xl font-serif text-center mb-6 font-bold tracking-wider text-shadow">
-						NUESTRO MEJOR REGALO.
-					</h3>
-					<div className="text-lg md:text-xl font-light leading-relaxed text-shadow max-w-sm mx-auto mb-8">
-						<p className="mb-2">PERO SI QUIERES DARNOS UN PRESENTE..</p>
-						<p className="mb-2">¡PUEDES AYUDARNOS A TENER UNA LUNA DE MIEL INCREIBLE!</p>
+
+					<div className="text-black font-semibold font-sans md:text-xl leading-relaxed max-w-sm mx-auto my-8">
+						<p className="mb-2">
+							PERO SI QUIERES DARNOS UN PRESENTE... ¡PUEDES AYUDARNOS A TENER
+							UNA LUNA DE MIEL INCREIBLE!
+						</p>
 					</div>
 
 					{/* Detalles bancarios */}
-					<div className="inline-block border border-white rounded-lg p-8 relative">
-						<div className="text-left">
-							<h4 className="text-2xl md:text-3xl font-serif font-bold mb-4 text-shadow">
-								BANCO UENO
+					<div className="inline-block border border-amber-800 rounded-lg p-12 mt-12 md:mt-0 relative">
+						<div className="text-center">
+							<h4 className="text-2xl font-serif font-bold mb-2">
+								UENO BANK
 							</h4>
-							<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+							<p className="text-xl md:text-xl font-light mb-2">
 								Alejandro Mendieta
 							</p>
-							<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+							<p className="text-xl md:text-xl font-light mb-2">
 								Cuenta N°: 14825960
 							</p>
-							<p className="text-lg md:text-xl font-light mb-2 text-shadow">
+							<p className="text-xl md:text-xl font-light mb-2">
 								C.I.N°: 4.670.473
 							</p>
-							<p className="text-lg md:text-xl font-light text-shadow">
-								Alias: <span className="font-bold">4670473</span>
+							<p className="text-xl md:text-xl font-light">
+								<span className="font-bold">Alias: 4670473</span>
 							</p>
 						</div>
 					</div>
