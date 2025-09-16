@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { motion } from 'motion/react'
 
 const Location = () => {
+	const imagePath = '48bb166f43c17820431359e70d8a41db.jpg'
+	const mobileImagePath = '20250914155711275.jpeg.jpg'
 	const URL_MAP_LOCATION = 'https://maps.app.goo.gl/hGLR3TQqsg7kH9Yf8'
 	// Animaciones de entrada
 	const containerVariants = {
@@ -74,23 +76,34 @@ const Location = () => {
 
 	return (
 		<section className="relative w-full h-screen flex flex-col justify-center overflow-hidden">
-			{/* Imagen de fondo */}
-			<div className="absolute inset-0 w-full h-full">
+			{/* Imagen de fondo - Desktop */}
+			<div className="absolute inset-0 w-full h-full hidden md:block">
 				<Image
-					src="/48bb166f43c17820431359e70d8a41db.jpg"
+					src={imagePath}
 					alt="Centro Cultural y de Convenciones ITA ENRAMADA"
 					fill
 					className="object-cover blur-[2px] md:blur-none"
 					priority
 				/>
 			</div>
+			
+			{/* Imagen de fondo - Mobile */}
+			<div className="absolute inset-0 w-full h-full block md:hidden">
+				<Image
+					src={mobileImagePath}
+					alt="Centro Cultural y de Convenciones ITA ENRAMADA"
+					fill
+					className="object-cover md:blur-none"
+					priority
+				/>
+			</div>
 
 			{/* Overlay oscuro semi-transparente con animación */}
 			<motion.div
-				className="absolute inset-0 bg-black/50"
+				className="absolute inset-0 md:bg-black/50 bg-black/60"
 				initial={{ opacity: 0 }}
 				whileInView={{ opacity: 1 }}
-				viewport={{ once: true }}
+				viewport={{ once: false }}
 				transition={{ duration: 1.5, delay: 0.3 }}
 			></motion.div>
 
@@ -201,7 +214,7 @@ const Location = () => {
 				>
 					<div className="aspect-video w-full relative bg-gray-300">
 						<Image
-							src="/48bb166f43c17820431359e70d8a41db.jpg"
+							src={imagePath}
 							alt="Centro Cultural y de Convenciones ITA ENRAMADA"
 							fill
 							className="object-cover"
