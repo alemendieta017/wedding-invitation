@@ -8,6 +8,7 @@ import Honeymoon from './sections/Honeymoon'
 import Schedule from './sections/Schedule'
 import Footer from './sections/Footer'
 import ChurchLocation from './sections/ChurchLocation'
+import MusicPlayer from './components/MusicPlayer'
 
 export default function Home() {
 	return (
@@ -22,6 +23,10 @@ export default function Home() {
 			<Honeymoon />
 			<Gallery />
 			<Footer />
+			<MusicPlayer 
+				youtubeVideoId="i9UDD6zyCGs"
+				title="Nuestra Canción Especial"
+			/>
 		</main>
 	)
 }

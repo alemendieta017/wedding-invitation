@@ -22,7 +22,7 @@ const Gallery = () => {
 		},
 		{
 			src: '/20250914160608678.jpeg.jpg',
-			alt: 'Momento romántico con mi churra',
+			alt: 'Momento romántico',
 		},
 		{
 			src: '/20250914170028570.jpeg.jpg',
