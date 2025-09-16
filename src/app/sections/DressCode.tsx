@@ -16,7 +16,7 @@ const DressCode = () => {
 				loop
 				muted
 				playsInline
-				className="absolute inset-0 w-full h-full object-cover"
+				className="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
 			>
 				<source src="/4d369b99254624da301ad06d8c20480e.mp4" type="video/mp4" />
 			</video>
