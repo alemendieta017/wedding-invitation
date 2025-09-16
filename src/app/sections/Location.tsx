@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'motion/react'
 
 const Location = () => {
+	const URL_MAP_LOCATION = 'https://maps.app.goo.gl/hGLR3TQqsg7kH9Yf8'
 	// Animaciones de entrada
 	const containerVariants = {
 		hidden: { opacity: 0 },
@@ -133,6 +134,45 @@ const Location = () => {
 				>
 					AVDA. CORONEL ABRAHAN SCHWEIZER, ASUNCIÓN
 				</motion.p>
+
+				{/* Botón de mapa */}
+				<motion.div
+					className="mt-6"
+					variants={{
+						hidden: {
+							opacity: 0,
+							y: 40,
+							scale: 0.95,
+						},
+						visible: {
+							opacity: 1,
+							y: 0,
+							scale: 1,
+							transition: {
+								duration: 0.8,
+								ease: 'easeOut' as const,
+								delay: 1.2,
+							},
+						},
+					}}
+				>
+					<a
+						href={URL_MAP_LOCATION}
+						target="_blank"
+						rel="noopener noreferrer"
+						className="inline-flex items-center gap-2 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium py-2 px-4 rounded-lg border border-white/30 transition-all duration-300 hover:border-white/50"
+					>
+						<svg
+							className="w-4 h-4"
+							fill="currentColor"
+							viewBox="0 0 24 24"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" />
+						</svg>
+						Ver en mapa
+					</a>
+				</motion.div>
 
 				{/* Imagen adicional solo para móvil */}
 				<motion.div
