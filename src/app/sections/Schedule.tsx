@@ -12,8 +12,8 @@ const Schedule = () => {
 				className="object-fit w-48 md:h-64 object-bottom -rotate-90 absolute -top-11 left-0"
 			/>
 
-			<div className="text-center md:absolute md:top-22 md:left-20">
-				<h2 className="text-xl md:text-3xl font-serif text-amber-800 font-bold tracking-wider">
+			<div className="text-center md:absolute md:top-22 md:left-20 hover:pointer-none hover:scale-105 transition-all duration-300">
+				<h2 className="text-xl md:text-3xl font-serif text-amber-800 tracking-wider">
 					EL GRAN DÍA
 				</h2>
 			</div>
@@ -23,7 +23,7 @@ const Schedule = () => {
 				alt="Cronograma del día"
 				width={1080}
 				height={1920}
-				className="hidden md:block mx-auto object-contain max-w-2xl w-full"
+				className="hidden md:block mx-auto object-contain max-w-2xl w-full hover:scale-105 transition-all duration-300"
 			/>
 			<Image
 				src="/schedule_mobile.png"

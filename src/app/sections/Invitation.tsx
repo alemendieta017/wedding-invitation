@@ -1,13 +1,50 @@
+'use client'
+
+import { useEffect, useRef, useState } from 'react'
+
 const Invitation = () => {
+	const [isVisible, setIsVisible] = useState(false)
+	const sectionRef = useRef<HTMLElement>(null)
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				setIsVisible(entry.isIntersecting)
+			},
+			{
+				threshold: 0,
+			}
+		)
+
+		const currentSection = sectionRef.current
+		if (currentSection) {
+			observer.observe(currentSection)
+		}
+
+		return () => {
+			if (currentSection) {
+				observer.unobserve(currentSection)
+			}
+		}
+	}, [])
+
 	return (
-		<section
-			className="relative w-full h-screen bg-fixed bg-cover bg-center bg-no-repeat"
-			style={{
-				backgroundImage: "url('/20250914161711261.jpeg.jpg')",
-			}}
-		>
-			{/* Overlay oscuro */}
-			<div className="absolute inset-0 bg-black/50"></div>
+		<section ref={sectionRef} className="relative w-full h-svh">
+			{/* Imagen fija de fondo - solo visible cuando la sección está en viewport */}
+			<div
+				className={`fixed h-screen inset-0 bg-cover bg-center bg-no-repeat -z-10 transition-opacity duration-300 ${
+					isVisible ? 'opacity-100' : 'opacity-0'
+				}`}
+				style={{
+					backgroundImage: "url('/20250914161711261.jpeg.jpg')",
+				}}
+			/>
+			{/* Overlay oscuro - solo visible cuando la sección está en viewport */}
+			<div
+				className={`fixed h-screen inset-0 bg-black/50 -z-10 transition-opacity duration-300 ${
+					isVisible ? 'opacity-100' : 'opacity-0'
+				}`}
+			/>
 
 			{/* Contenido */}
 			<div className="relative z-10 h-screen max-w-2xl mx-auto flex items-center justify-center px-6">

@@ -1,30 +1,141 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'motion/react'
 
 const ChurchLocation = () => {
 	const imagePath = 'IMG_20250902_201638~2.jpg'
+
+	// Animaciones de entrada
+	const containerVariants = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				duration: 1.2,
+				ease: 'easeOut' as const,
+				staggerChildren: 0.4,
+			},
+		},
+	}
+
+	const titleVariants = {
+		hidden: {
+			opacity: 0,
+			y: 80,
+			scale: 0.9,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				duration: 1.2,
+				ease: 'easeOut' as const,
+				delay: 0.2,
+			},
+		},
+	}
+
+	const subtitleVariants = {
+		hidden: {
+			opacity: 0,
+			y: 60,
+			scale: 0.95,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				duration: 1,
+				ease: 'easeOut' as const,
+				delay: 0.6,
+			},
+		},
+	}
+
+	const addressVariants = {
+		hidden: {
+			opacity: 0,
+			y: 40,
+			scale: 0.95,
+		},
+		visible: {
+			opacity: 1,
+			y: 0,
+			scale: 1,
+			transition: {
+				duration: 0.8,
+				ease: 'easeOut' as const,
+				delay: 1.0,
+			},
+		},
+	}
+
 	return (
-		<section className="relative w-full min-h-screen flex flex-col justify-center">
-			<Image
-				src={imagePath}
-				alt="Centro Cultural y de Convenciones ITA ENRAMADA"
-				fill
-				className="object-cover"
-				priority
-			/>
-
-			<div className="absolute inset-0 bg-black/60"></div>
-
-			<div className="relative z-10 max-w-4xl text-white px-10 space-y-4 flex flex-col items-center mx-auto">
-				<h2 className="text-2xl md:text-3xl font-serif text-center text-shadow">
-					LUGAR DE LA CEREMONIA RELIGIOSA
-				</h2>
-				<p className="font-sans md:text-xl font-semibold text-center md:max-w-sm tracking-widest text-shadow">
-					PARROQUIA NUESTRA SEÑORA DE LOS MILAGROS CAACUPEMI
-				</p>
-				<p className="font-sans md:text-xl font-light text-sm text-center tracking-wider text-shadow">
-					CORONEL WEISSLLER C/ AVDA. FERNANDO DE LA MORA, ASUNCIÓN.
-				</p>
+		<section className="relative w-full min-h-screen flex flex-col justify-center overflow-hidden">
+			{/* Imagen de fondo */}
+			<div className="absolute inset-0 w-full h-full">
+				<Image
+					src={imagePath}
+					alt="Centro Cultural y de Convenciones ITA ENRAMADA"
+					fill
+					className="object-cover"
+					priority
+				/>
 			</div>
+
+			{/* Overlay oscuro semi-transparente con animación */}
+			<motion.div
+				className="absolute inset-0 bg-black/60"
+				initial={{ opacity: 0 }}
+				whileInView={{ opacity: 1 }}
+				viewport={{ once: false }}
+				transition={{ duration: 1.5, delay: 0.3 }}
+			></motion.div>
+
+			{/* Contenido con animaciones */}
+			<motion.div
+				className="relative z-10 max-w-4xl text-white px-10 space-y-4 flex flex-col items-center mx-auto"
+				variants={containerVariants}
+				initial="hidden"
+				whileInView="visible"
+				viewport={{ once: true, amount: 0.3 }}
+			>
+				<motion.h2
+					className="text-2xl md:text-3xl font-serif text-center text-shadow"
+					variants={titleVariants}
+					whileHover={{
+						scale: 1.05,
+						transition: { duration: 0.3 },
+					}}
+				>
+					LUGAR DE LA CEREMONIA RELIGIOSA
+				</motion.h2>
+
+				<motion.p
+					className="font-sans md:text-xl font-semibold text-center md:max-w-sm tracking-widest text-shadow"
+					variants={subtitleVariants}
+					whileHover={{
+						scale: 1.02,
+						transition: { duration: 0.2 },
+					}}
+				>
+					PARROQUIA NUESTRA SEÑORA DE LOS MILAGROS CAACUPEMI
+				</motion.p>
+
+				<motion.p
+					className="font-sans md:text-xl font-light text-sm text-center tracking-wider text-shadow"
+					variants={addressVariants}
+					whileHover={{
+						scale: 1.02,
+						transition: { duration: 0.2 },
+					}}
+				>
+					CORONEL WEISSLLER C/ AVDA. FERNANDO DE LA MORA, ASUNCIÓN.
+				</motion.p>
+			</motion.div>
 		</section>
 	)
 }

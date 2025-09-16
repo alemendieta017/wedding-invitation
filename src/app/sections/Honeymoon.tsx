@@ -18,11 +18,11 @@ const Honeymoon = () => {
 			<div className="absolute inset-0 bg-white/90"></div>
 			<div className="relative z-10 px-4">
 				<div className="max-w-4xl mx-auto text-center text-black">
-					<h2 className="text-amber-800 text-2xl md:text-3xl italic font-family-[Times New Roman] uppercase text-center mb-2 font-bold tracking-wider">
+					<h2 className="text-amber-800 text-2xl md:text-3xl font-serif uppercase text-center mb-2 tracking-wider">
 						¡Tu presencia es nuestro mejor regalo!
 					</h2>
 
-					<div className="text-black font-semibold font-sans md:text-xl leading-relaxed max-w-sm mx-auto my-8">
+					<div className="text-black font-sans md:text-xl leading-relaxed max-w-sm mx-auto my-8">
 						<p className="mb-2">
 							PERO SI QUIERES DARNOS UN PRESENTE... ¡PUEDES AYUDARNOS A TENER
 							UNA LUNA DE MIEL INCREIBLE!
