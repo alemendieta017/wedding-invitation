@@ -1,45 +1,44 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--background: #ffffff;
+	--foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-montserrat-arabic);
-  --font-mono: var(--font-geist-mono);
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--font-sans: var(--font-montserrat);
+	--font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+	:root {
+		--background: #0a0a0a;
+		--foreground: #ededed;
+	}
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
 }
 
 /* Estilos para la primera sección de boda */
+.font-gwendolyn {
+	font-family: var(--font-gwendolyn), 'Gwendolyn', cursive;
+}
+
 .font-great-vibes {
-  font-family: var(--font-great-vibes), "Great Vibes", cursive;
+	font-family: var(--font-great-vibes), 'Great Vibes', cursive;
 }
 
 .font-serif {
-  font-family: var(--font-le-jour-serif), 'Times New Roman', serif;
-}
-
-/* Asegurar que la imagen de fondo se vea correctamente */
-.hero-section {
-  height: 100dvh;
+	font-family: var(--font-le-jour-serif), 'Times New Roman', serif;
 }
 
 /* Mejorar la legibilidad del texto sobre la imagen */
 .text-shadow {
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }

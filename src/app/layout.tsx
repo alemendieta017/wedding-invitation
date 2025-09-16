@@ -1,17 +1,20 @@
 import type { Metadata } from "next";
-import { Great_Vibes } from "next/font/google";
+import { Gwendolyn, Great_Vibes, Montserrat } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
+const gwendolyn = Gwendolyn({
+  variable: "--font-gwendolyn",
   subsets: ["latin"],
-  weight: "400",
+  weight: ["400", "700"],
+  display: "swap",
 });
 
-const montserratArabic = localFont({
-  src: "../../public/fonts/Montserrat-Arabic-Regular.ttf",
-  variable: "--font-montserrat-arabic",
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const leJourSerif = localFont({
@@ -19,8 +22,15 @@ const leJourSerif = localFont({
   variable: "--font-le-jour-serif",
 });
 
+const greatVibes = Great_Vibes({
+  variable: "--font-great-vibes",
+  subsets: ["latin"],
+  weight: ["400"],
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Jessica & Alejandro - Boda",
+  title: "Jesse & Ale 💍",
   description: "Página web de la boda de Jessica y Alejandro",
 };
 
@@ -32,7 +42,7 @@ export default function RootLayout({
   return (
     <html lang="es">
       <body
-        className={`${greatVibes.variable} ${montserratArabic.variable} ${leJourSerif.variable} antialiased`}
+        className={`${gwendolyn.variable} ${greatVibes.variable} ${montserrat.variable} ${leJourSerif.variable} antialiased`}
       >
         {children}
       </body>
