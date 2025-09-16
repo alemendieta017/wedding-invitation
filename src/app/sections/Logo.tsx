@@ -7,7 +7,7 @@ const Logo = () => {
 	return (
 		<>
 			{/* Segunda sección - Logo y fecha de la boda */}
-			<section className="px-4 min-h-screen flex flex-col justify-center relative overflow-hidden">
+			<section className="px-4 flex min-h-screen flex-col justify-center relative overflow-hidden">
 				{/* Video de fondo */}
 				<video
 					autoPlay
@@ -26,30 +26,30 @@ const Logo = () => {
 				<div className="absolute inset-0 bg-white/90"></div>
 
 				{/* Contenido centrado con z-index para estar sobre el video */}
-				<div className="md:min-h-none py-40 md:py-30 mx-auto text-center relative z-10">
+				<div className="py-16 md:py-12 mx-auto text-center relative z-10">
 					{/* Logo de la boda */}
-					<motion.div 
+					<motion.div
 						className="mx-auto"
 						initial={{ opacity: 0, scale: 0.8, y: 50 }}
-						animate={{ 
-							opacity: 1, 
-							scale: 1, 
-							y: [0, -10, 0]
+						animate={{
+							opacity: 1,
+							scale: 1,
+							y: [0, -10, 0],
 						}}
-						transition={{ 
-							opacity: { duration: 1.2, ease: "easeOut", delay: 0.3 },
-							scale: { duration: 1.2, ease: "easeOut", delay: 0.3 },
+						transition={{
+							opacity: { duration: 1.2, ease: 'easeOut', delay: 0.3 },
+							scale: { duration: 1.2, ease: 'easeOut', delay: 0.3 },
 							y: {
 								duration: 4,
 								repeat: Infinity,
-								ease: "easeInOut",
-								delay: 1.5
-							}
+								ease: 'easeInOut',
+								delay: 1.5,
+							},
 						}}
-						whileHover={{ 
+						whileHover={{
 							scale: 1.05,
 							y: -5,
-							transition: { duration: 0.3 }
+							transition: { duration: 0.3 },
 						}}
 					>
 						<Image
@@ -63,43 +63,43 @@ const Logo = () => {
 					</motion.div>
 
 					{/* Fecha de la boda */}
-					<motion.div 
+					<motion.div
 						className="inline-block mt-8"
 						initial={{ opacity: 0, y: 30 }}
 						animate={{ opacity: 1, y: 0 }}
-						transition={{ 
-							duration: 0.8, 
-							ease: "easeOut",
-							delay: 1.0
+						transition={{
+							duration: 0.8,
+							ease: 'easeOut',
+							delay: 1.0,
 						}}
 					>
-						<motion.h2 
+						<motion.h2
 							className="text-4xl md:text-5xl font-great-vibes text-amber-800 font-light tracking-wider border-y border-black px-2 py-1"
 							initial={{ opacity: 0, scale: 0.9 }}
-							animate={{ 
-								opacity: 1, 
+							animate={{
+								opacity: 1,
 								scale: 1,
 								textShadow: [
-									"0 0 0px rgba(146, 64, 14, 0)",
-									"0 0 10px rgba(146, 64, 14, 0.3)",
-									"0 0 0px rgba(146, 64, 14, 0)"
-								]
+									'0 0 0px rgba(146, 64, 14, 0)',
+									'0 0 10px rgba(146, 64, 14, 0.3)',
+									'0 0 0px rgba(146, 64, 14, 0)',
+								],
 							}}
-							transition={{ 
-								opacity: { duration: 0.6, ease: "easeOut", delay: 1.2 },
-								scale: { duration: 0.6, ease: "easeOut", delay: 1.2 },
+							transition={{
+								opacity: { duration: 0.6, ease: 'easeOut', delay: 1.2 },
+								scale: { duration: 0.6, ease: 'easeOut', delay: 1.2 },
 								textShadow: {
 									duration: 3,
 									repeat: Infinity,
-									ease: "easeInOut",
-									delay: 2.0
-								}
+									ease: 'easeInOut',
+									delay: 2.0,
+								},
 							}}
-							whileHover={{ 
+							whileHover={{
 								scale: 1.05,
-								color: "#92400e",
-								textShadow: "0 0 15px rgba(146, 64, 14, 0.5)",
-								transition: { duration: 0.2 }
+								color: '#92400e',
+								textShadow: '0 0 15px rgba(146, 64, 14, 0.5)',
+								transition: { duration: 0.2 },
 							}}
 						>
 							25 . 10 . 2025

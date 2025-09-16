@@ -1,5 +1,6 @@
 import Header from './sections/Header'
 import Logo from './sections/Logo'
+import Gallery from './sections/Gallery'
 import Invitation from './sections/Invitation'
 import DressCode from './sections/DressCode'
 import Location from './sections/Location'
@@ -19,6 +20,7 @@ export default function Home() {
 			<Schedule />
 			<Location />
 			<Honeymoon />
+			<Gallery />
 			<Footer />
 		</main>
 	)

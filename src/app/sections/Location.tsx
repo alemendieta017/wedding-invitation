@@ -79,7 +79,7 @@ const Location = () => {
 					src="/48bb166f43c17820431359e70d8a41db.jpg"
 					alt="Centro Cultural y de Convenciones ITA ENRAMADA"
 					fill
-					className="object-cover"
+					className="object-cover blur-[2px] md:blur-none"
 					priority
 				/>
 			</div>
@@ -133,6 +133,41 @@ const Location = () => {
 				>
 					AVDA. CORONEL ABRAHAN SCHWEIZER, ASUNCIÓN
 				</motion.p>
+
+				{/* Imagen adicional solo para móvil */}
+				<motion.div
+					className="w-full max-w-md mx-auto mt-8 rounded-2xl overflow-hidden shadow-2xl bg-gray-200 relative md:hidden"
+					variants={{
+						hidden: {
+							opacity: 0,
+							y: 40,
+							scale: 0.95,
+						},
+						visible: {
+							opacity: 1,
+							y: 0,
+							scale: 1,
+							transition: {
+								duration: 0.8,
+								ease: 'easeOut' as const,
+								delay: 1.4,
+							},
+						},
+					}}
+					whileHover={{
+						scale: 1.02,
+						transition: { duration: 0.3 },
+					}}
+				>
+					<div className="aspect-video w-full relative bg-gray-300">
+						<Image
+							src="/48bb166f43c17820431359e70d8a41db.jpg"
+							alt="Centro Cultural y de Convenciones ITA ENRAMADA"
+							fill
+							className="object-cover"
+						/>
+					</div>
+				</motion.div>
 			</motion.div>
 		</section>
 	)
