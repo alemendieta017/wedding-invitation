@@ -6,7 +6,8 @@ import { motion, useInView } from 'motion/react'
 
 const DressCode = () => {
 	const ref = useRef(null)
-	const isInView = useInView(ref, { once: true, margin: "-100px" })
+	const isInView = useInView(ref, { once: true, margin: '-100px' })
+	const videoPath = '/4d369b99254624da301ad06d8c20480e.mp4'
 
 	return (
 		<section ref={ref} className="relative w-full overflow-hidden">
@@ -18,7 +19,7 @@ const DressCode = () => {
 				playsInline
 				className="absolute inset-0 w-full h-full object-cover scale-x-[-1]"
 			>
-				<source src="/4d369b99254624da301ad06d8c20480e.mp4" type="video/mp4" />
+				<source src={videoPath} type="video/mp4" />
 			</video>
 
 			{/* Overlay claro para mejor legibilidad */}
@@ -40,7 +41,7 @@ const DressCode = () => {
 					{/* Layout para desktop */}
 					<div className="hidden md:flex items-start justify-center gap-8 max-w-5xl mx-auto">
 						{/* Traje masculino */}
-						<motion.div 
+						<motion.div
 							className="flex flex-col items-center"
 							initial={{ opacity: 0, x: -50 }}
 							animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
@@ -49,15 +50,17 @@ const DressCode = () => {
 						>
 							<motion.div
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 0.4 }}
 								whileInView={{
 									y: [-8, 8, -8],
 									transition: {
 										duration: 4,
 										repeat: Infinity,
-										ease: "easeInOut"
-									}
+										ease: 'easeInOut',
+									},
 								}}
 							>
 								<Image
@@ -69,10 +72,12 @@ const DressCode = () => {
 									priority
 								/>
 							</motion.div>
-							<motion.div 
+							<motion.div
 								className="mt-6 text-center"
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 0.6 }}
 							>
 								<h4 className="text-xl font-sans font-bold text-gray-900 tracking-widest">
@@ -88,10 +93,12 @@ const DressCode = () => {
 						</motion.div>
 
 						{/* Separador floral central */}
-						<motion.div 
+						<motion.div
 							className="flex items-center justify-center h-full"
 							initial={{ opacity: 0, scale: 0.8 }}
-							animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+							animate={
+								isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
+							}
 							transition={{ duration: 0.8, delay: 0.5 }}
 						>
 							<Image
@@ -105,7 +112,7 @@ const DressCode = () => {
 						</motion.div>
 
 						{/* Traje femenino */}
-						<motion.div 
+						<motion.div
 							className="flex flex-col items-center"
 							initial={{ opacity: 0, x: 50 }}
 							animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -114,15 +121,17 @@ const DressCode = () => {
 						>
 							<motion.div
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 0.4 }}
 								whileInView={{
 									y: [-6, 6, -6],
 									transition: {
 										duration: 3.5,
 										repeat: Infinity,
-										ease: "easeInOut"
-									}
+										ease: 'easeInOut',
+									},
 								}}
 							>
 								<Image
@@ -134,10 +143,12 @@ const DressCode = () => {
 									priority
 								/>
 							</motion.div>
-							<motion.div 
+							<motion.div
 								className="mt-6 text-center"
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 0.6 }}
 							>
 								<h4 className="text-xl font-sans font-bold text-gray-900 tracking-widest">
@@ -156,20 +167,28 @@ const DressCode = () => {
 					{/* Layout para mobile */}
 					<div className="md:hidden flex flex-col items-center gap-16">
 						{/* Traje femenino */}
-						<motion.div 
+						<motion.div
 							className="flex flex-col items-center"
 							initial={{ opacity: 0, x: -100, y: 50 }}
-							animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: -100, y: 50 }}
-							transition={{ 
-								duration: 1.2, 
+							animate={
+								isInView
+									? { opacity: 1, x: 0, y: 0 }
+									: { opacity: 0, x: -100, y: 50 }
+							}
+							transition={{
+								duration: 1.2,
 								delay: 0.2,
-								ease: [0.25, 0.46, 0.45, 0.94] // Curva suave
+								ease: [0.25, 0.46, 0.45, 0.94], // Curva suave
 							}}
 							whileHover={{ scale: 1.05 }}
 						>
 							<motion.div
 								initial={{ opacity: 0, scale: 0.9 }}
-								animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+								animate={
+									isInView
+										? { opacity: 1, scale: 1 }
+										: { opacity: 0, scale: 0.9 }
+								}
 								transition={{ duration: 0.6, delay: 0.4 }}
 								whileInView={{
 									y: [-5, 5, -5],
@@ -177,8 +196,8 @@ const DressCode = () => {
 									transition: {
 										duration: 3,
 										repeat: Infinity,
-										ease: "easeInOut"
-									}
+										ease: 'easeInOut',
+									},
 								}}
 							>
 								<Image
@@ -192,7 +211,9 @@ const DressCode = () => {
 							</motion.div>
 							<motion.div
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 0.6 }}
 							>
 								<h4 className="text-lg font-sans font-bold text-gray-900 tracking-widest text-center mt-4">
@@ -207,20 +228,28 @@ const DressCode = () => {
 							</motion.div>
 						</motion.div>
 						{/* Traje masculino */}
-						<motion.div 
+						<motion.div
 							className="flex flex-col items-center"
 							initial={{ opacity: 0, x: 100, y: 50 }}
-							animate={isInView ? { opacity: 1, x: 0, y: 0 } : { opacity: 0, x: 100, y: 50 }}
-							transition={{ 
-								duration: 1.2, 
+							animate={
+								isInView
+									? { opacity: 1, x: 0, y: 0 }
+									: { opacity: 0, x: 100, y: 50 }
+							}
+							transition={{
+								duration: 1.2,
 								delay: 0.8,
-								ease: [0.25, 0.46, 0.45, 0.94] // Curva suave
+								ease: [0.25, 0.46, 0.45, 0.94], // Curva suave
 							}}
 							whileHover={{ scale: 1.05 }}
 						>
 							<motion.div
 								initial={{ opacity: 0, scale: 0.9 }}
-								animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+								animate={
+									isInView
+										? { opacity: 1, scale: 1 }
+										: { opacity: 0, scale: 0.9 }
+								}
 								transition={{ duration: 0.6, delay: 1.0 }}
 								whileInView={{
 									y: [-7, 7, -7],
@@ -228,8 +257,8 @@ const DressCode = () => {
 									transition: {
 										duration: 3.8,
 										repeat: Infinity,
-										ease: "easeInOut"
-									}
+										ease: 'easeInOut',
+									},
 								}}
 							>
 								<Image
@@ -243,7 +272,9 @@ const DressCode = () => {
 							</motion.div>
 							<motion.div
 								initial={{ opacity: 0, y: 20 }}
-								animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+								animate={
+									isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }
+								}
 								transition={{ duration: 0.6, delay: 1.2 }}
 							>
 								<h4 className="text-lg font-sans font-bold text-gray-900 tracking-widest text-center mt-4">

@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { motion } from 'motion/react'
 
 const ChurchLocation = () => {
-	const imagePath = 'IMG_20250902_201638~2.jpg'
-	const mobileImagePath = '20250914162545066.jpeg.jpg'
+	const imagePath = 'IMG_20250902_201638~2.webp'
+	const mobileImagePath = '20250914162545066.jpeg.webp'
 	const URL_MAP_CHURCH = 'https://maps.app.goo.gl/WsMq7dXKmn9YZxcA7'
 
 	// Animaciones de entrada

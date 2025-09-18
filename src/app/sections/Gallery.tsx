@@ -13,19 +13,19 @@ const Gallery = () => {
 	// Imágenes de la galería romántica
 	const galleryImages = [
 		{
-			src: '/20250914155711275.jpeg.jpg',
+			src: '/20250914155711275.jpeg.webp',
 			alt: 'Abrazo bajo el arco',
 		},
 		{
-			src: '/20250914162545066.jpeg.jpg',
+			src: '/20250914162545066.jpeg.webp',
 			alt: 'Intimidad y amor',
 		},
 		{
-			src: '/20250914160608678.jpeg.jpg',
+			src: '/20250914160608678.jpeg.webp',
 			alt: 'Momento romántico',
 		},
 		{
-			src: '/20250914170028570.jpeg.jpg',
+			src: '/20250914170028570.jpeg.webp',
 			alt: 'Romance bajo las flores',
 		},
 	]

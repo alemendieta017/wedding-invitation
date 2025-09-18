@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 const Invitation = () => {
+	const imagePath = '20250914161711261.jpeg.webp'
 	const [isVisible, setIsVisible] = useState(false)
 	const sectionRef = useRef<HTMLElement>(null)
 
@@ -36,7 +37,7 @@ const Invitation = () => {
 					isVisible ? 'opacity-100' : 'opacity-0'
 				}`}
 				style={{
-					backgroundImage: "url('/20250914161711261.jpeg.jpg')",
+					backgroundImage: `url('/${imagePath}')`,
 				}}
 			/>
 			{/* Overlay oscuro - solo visible cuando la sección está en viewport */}

@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const Location = () => {
 	const imagePath = '48bb166f43c17820431359e70d8a41db.jpg'
-	const mobileImagePath = '20250914155711275.jpeg.jpg'
+	const mobileImagePath = '20250914155711275.jpeg.webp'
 	const URL_MAP_LOCATION = 'https://maps.app.goo.gl/hGLR3TQqsg7kH9Yf8'
 	// Animaciones de entrada
 	const containerVariants = {

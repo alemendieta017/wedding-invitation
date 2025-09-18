@@ -5,7 +5,8 @@ import { useEffect, useRef, useState } from 'react'
 const Footer = () => {
 	const URL_WHATSAPP =
 		'https://wa.me/595994208286?text=Hola%2C%20quiero%20confirmar%20presencia%20en%20la%20boda%20de%20Ale%20%26%20Jessi%20%E2%98%BA%EF%B8%8F'
-	const [isVisible, setIsVisible] = useState(false)
+	const imagePath = '20250825002456280.jpeg.webp'
+		const [isVisible, setIsVisible] = useState(false)
 	const sectionRef = useRef<HTMLElement>(null)
 
 	useEffect(() => {
@@ -41,7 +42,7 @@ const Footer = () => {
 					isVisible ? 'opacity-100' : 'opacity-0'
 				}`}
 				style={{
-					backgroundImage: "url('/20250825002456280.jpeg.jpg')",
+					backgroundImage: `url('/${imagePath}')`,
 					backgroundPosition: '50% 40%',
 				}}
 			/>

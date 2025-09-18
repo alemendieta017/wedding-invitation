@@ -5,8 +5,8 @@ import { motion, useScroll, useTransform } from 'motion/react'
 
 const Header = () => {
 	const { scrollY } = useScroll()
-
-	// Efecto parallax para las imágenes de fondo
+	const mobileImagePath = '20250827092024463.jpeg.webp'
+	const imagePath = '/1757994534332.jpg'
 	const backgroundY = useTransform(scrollY, [0, 1000], ['0%', '50%'])
 	const backgroundOpacity = useTransform(scrollY, [0, 300], [1, 0.3])
 
@@ -85,7 +85,7 @@ const Header = () => {
 					className="absolute inset-0 w-full h-full"
 				>
 					<Image
-						src="20250827092024463.jpeg.jpg"
+						src={mobileImagePath}
 						alt="Jessica y Alejandro - Foto de boda"
 						fill
 						className="object-cover md:hidden"
@@ -99,7 +99,7 @@ const Header = () => {
 					className="absolute inset-0 w-full h-full"
 				>
 					<Image
-						src="/1757994534332.jpg"
+						src={imagePath}
 						alt="Jessica y Alejandro - Foto de boda"
 						fill
 						className="object-cover hidden md:block"

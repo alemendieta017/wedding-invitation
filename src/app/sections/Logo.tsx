@@ -4,6 +4,8 @@ import Image from 'next/image'
 import { motion } from 'motion/react'
 
 const Logo = () => {
+	const videoPath = '/4d369b99254624da301ad06d8c20480e.mp4'
+
 	return (
 		<>
 			{/* Segunda sección - Logo y fecha de la boda */}
@@ -16,10 +18,7 @@ const Logo = () => {
 					playsInline
 					className="absolute inset-0 w-full h-full object-cover"
 				>
-					<source
-						src="/4d369b99254624da301ad06d8c20480e.mp4"
-						type="video/mp4"
-					/>
+					<source src={videoPath} type="video/mp4" />
 				</video>
 
 				{/* Overlay claro para hacer el fondo más luminoso */}
