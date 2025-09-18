@@ -12,7 +12,7 @@ const Schedule = () => {
 				className="object-fit w-48 md:h-64 object-bottom -rotate-90 absolute -top-11 left-0"
 			/>
 
-			<div className="z-10 text-center md:absolute md:top-22 md:left-20 hover:pointer-none hover:scale-105 transition-all duration-300">
+			<div className="z-10 text-center mb-10 md:absolute md:top-22 md:left-20 hover:pointer-none hover:scale-105 transition-all duration-300">
 				<h2 className="text-xl md:text-3xl font-serif text-amber-800 tracking-wider">
 					EL GRAN DÍA
 				</h2>
