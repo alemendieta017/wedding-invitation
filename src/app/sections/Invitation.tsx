@@ -31,7 +31,7 @@ const Invitation = () => {
 	}, [])
 
 	return (
-		<section ref={sectionRef} className="relative w-full h-screen">
+		<section ref={sectionRef} className="relative w-full h-svh">
 			{/* Imagen fija de fondo - solo visible cuando la sección está en viewport */}
 			<div
 				className={`fixed h-screen inset-0 bg-cover bg-center bg-no-repeat -z-10 transition-opacity duration-300 ${
