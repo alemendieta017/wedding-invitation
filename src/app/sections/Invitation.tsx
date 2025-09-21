@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import CountdownTimer from '../components/CountdownTimer'
 
 const Invitation = () => {
 	const imagePath = '20250914161711261.jpeg.webp'
@@ -30,7 +31,7 @@ const Invitation = () => {
 	}, [])
 
 	return (
-		<section ref={sectionRef} className="relative w-full h-svh">
+		<section ref={sectionRef} className="relative w-full h-screen">
 			{/* Imagen fija de fondo - solo visible cuando la sección está en viewport */}
 			<div
 				className={`fixed h-screen inset-0 bg-cover bg-center bg-no-repeat -z-10 transition-opacity duration-300 ${
@@ -48,7 +49,7 @@ const Invitation = () => {
 			/>
 
 			{/* Contenido */}
-			<div className="relative z-10 h-screen max-w-2xl mx-auto flex items-center justify-center px-6">
+			<div className="relative z-10 h-screen max-w-2xl mx-auto flex flex-col items-center justify-center px-6">
 				<div className="max-w-screen-sm text-center text-white">
 					{/* Título principal */}
 					<h2 className="text-4xl font-serif text-center text-shadow mb-4 md:whitespace-nowrap">
@@ -64,6 +65,9 @@ const Invitation = () => {
 							GRABADOS PARA SIEMPRE EN NUESTRA MEMORIA.
 						</p>
 					</div>
+				</div>
+				<div className="mt-8 flex flex-col items-center justify-center">
+					<CountdownTimer />
 				</div>
 			</div>
 		</section>

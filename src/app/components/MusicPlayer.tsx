@@ -80,14 +80,14 @@ export default function MusicPlayer({
 
 			{/* Widget Flotante */}
 			<div className="fixed top-6 right-6 z-50">
-				<div className="bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 p-1 flex items-center gap-3">
+				{/* <div className="bg-white/90 backdrop-blur-sm rounded-full shadow-lg border border-gray-200 p-1 flex items-center gap-3"> */}
 					{/* Controles */}
 					<div className="flex items-center">
 						{/* Botón Play/Pause */}
 						<button
 							onClick={togglePlayPause}
 							disabled={!isLoaded}
-							className="w-10 h-10 bg-amber-800 hover:bg-amber-900 disabled:bg-gray-300 rounded-full flex items-center justify-center text-white transition-colors"
+							className="w-12 h-12 border-4 border-white bg-amber-800/80 backdrop-blur hover:bg-amber-900 disabled:bg-gray-300 rounded-full flex items-center justify-center text-white transition-colors"
 						>
 							{isPlaying ? (
 								<svg
@@ -108,7 +108,7 @@ export default function MusicPlayer({
 							)}
 						</button>
 					</div>
-				</div>
+				{/* </div> */}
 			</div>
 		</>
 	)

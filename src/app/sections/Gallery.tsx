@@ -102,11 +102,11 @@ const Gallery = () => {
 	return (
 		<section
 			ref={sectionRef}
-			className="relative w-full py-24 overflow-hidden bg-white"
+			className="relative w-full pt-24 pb-12 px-4 overflow-hidden bg-white"
 		>
 			{/* Contenido principal */}
 			<motion.div
-				className="relative z-10 h-full flex flex-col justify-center items-center px-4 md:px-6"
+				className="relative z-10 h-full flex flex-col justify-center items-center md:px-6"
 				variants={containerVariants}
 				initial="hidden"
 				animate={isVisible ? 'visible' : 'hidden'}
